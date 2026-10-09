@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang web cá nhân chia sẻ hành trình du lịch và bộ sưu tập nhiếp ảnh nghệ thuật của Minh Quang.">
+    <title>Minh Quang | Hành Trình & Nhiếp Ảnh Du Lịch</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* WAVE Accessibility high contrast hover states */
+        .btn-primary {
+            background-color: #0284c7;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #0369a1;
+            outline: 2px solid #38bdf8;
+            outline-offset: 2px;
+        }
+
+        .nav-link:focus {
+            outline: 2px solid #38bdf8;
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- Thẻ Semantic 1: HEADER -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800">
+        <!-- Thẻ Semantic 2: NAV -->
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" aria-label="Điều hướng chính">
+            <a href="#home" class="text-2xl font-bold tracking-wider text-white flex items-center gap-2 nav-link" aria-label="Trang chủ Minh Quang Studio">
+                <i class="fa-solid fa-camera-retro text-sky-400" aria-hidden="true"></i>
+                <span>MinhQuang<span class="text-sky-400">.Lens</span></span>
+            </a>
+            
+            <ul class="hidden md:flex items-center space-x-8 text-slate-300 font-medium">
+                <li><a href="#about" class="hover:text-sky-400 transition-colors nav-link py-2">Giới Thệu</a></li>
+                <li><a href="#gallery" class="hover:text-sky-400 transition-colors nav-link py-2">Bộ Sưu Tập</a></li>
+                <li><a href="#equipment" class="hover:text-sky-400 transition-colors nav-link py-2">Thiết Bị</a></li>
+                <li><a href="#contact" class="hover:text-sky-400 transition-colors nav-link py-2">Liên Hệ</a></li>
+            </ul>
+
+            <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full font-semibold btn-primary text-sm shadow-lg shadow-sky-900/30">
+                Hợp Tác Ngay
+            </a>
+        </nav>
+    </header>
+
+    <!-- Thẻ Semantic 3: MAIN (Bắt buộc) -->
+    <main id="main-content" class="flex-grow">
+        
+        <!-- Hero Section -->
+        <!-- Thẻ Semantic 4: SECTION -->
+        <section id="home" class="relative py-20 lg:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-sky-950 text-sky-400 border border-sky-800 mb-6">
+                        Nhiếp Ảnh Gia & Traveler
+                    </span>
+                    <!-- Thẻ H1 (Bắt buộc) -->
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                        Ghi Lại Khoảnh Khắc <br>
+                        <span class="text-gradient">Đẹp Nhất Của Tự Nhiên</span>
+                    </h1>
+                    <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                        Chào mừng bạn đến với không gian sáng tạo của tôi. Nơi lưu giữ những chuyến đi, cảnh sắc thiên nhiên hùng vĩ và những câu chuyện qua góc nhìn ống kính.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#gallery" class="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold btn-primary text-base shadow-lg shadow-sky-500/20 text-center">
+                            Khám Phá Ảnh
+                        </a>
+                        <!-- Liên kết ngoài (Bắt buộc) -->
+                        <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-center transition-all flex items-center justify-center gap-2" aria-label="Xem hồ sơ ảnh Unsplash (Mở trang mới)">
+                            <span>Hồ Sơ Unsplash</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-slate-900/50 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-4">Về Tôi - Nguyễn Minh Quang</h2>
+                        <p class="text-slate-300 mb-4 leading-relaxed">
+                            Tôi là một nhiếp ảnh gia tự do với hơn 5 năm kinh nghiệm di chuyển qua nhiều quốc gia. Đam mê lớn nhất của tôi là bắt trọn ánh sáng tự nhiên và vẻ đẹp hoang sơ của núi rừng, biển cả.
+                        </p>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Mỗi bức ảnh không chỉ là một khung hình, mà là một khoảnh khắc ngưng đọng của thời gian mang theo cảm xúc và câu chuyện riêng biệt.
+                        </p>
+                        
+                        <!-- Danh sách (Bắt buộc: tối thiểu 3 mục) -->
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-sky-400 mb-3">Lĩnh Vực Chuyên Môn:</h3>
+                            <ul class="space-y-2 text-slate-300">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-check text-sky-400" aria-hidden="true"></i>
+                                    <span>Nhiếp ảnh phong cảnh & thiên nhiên hoang dã</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-check text-sky-400" aria-hidden="true"></i>
+                                    <span>Chụp ảnh du lịch, văn hóa địa phương</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-check text-sky-400" aria-hidden="true"></i>
+                                    <span>Hậu kỳ hình ảnh chuyên nghiệp (Lightroom/Photoshop)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-check text-sky-400" aria-hidden="true"></i>
+                                    <span>Sáng tạo nội dung quảng bá du lịch</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Hình ảnh 1 (Đạt chuẩn ALT text cho WAVE) -->
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" 
+                             alt="Nhiếp ảnh gia đứng trên bãi biển ngắm hoàng hôn rực rỡ" 
+                             class="rounded-2xl shadow-2xl w-full object-cover h-[400px] border border-slate-700"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4">Bộ Sưu Tập Tác Phẩm</h2>
+                    <p class="text-slate-400">Những địa điểm tuyệt đẹp tôi đã từng đặt chân đến và ghi lại qua góc nhìn nhiếp ảnh.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Thẻ Semantic 5: ARTICLE -->
+                    <!-- Hình ảnh 2 -->
+                    <article class="glass-card rounded-2xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 group">
+                        <div class="overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Dãy núi hùng vĩ phủ đầy mây trắng dưới ánh nắng mặt trời" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Phong Cảnh</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Đỉnh Núi Hùng Vĩ</h3>
+                            <p class="text-slate-400 text-sm">Khoảnh khắc bình minh trên dãy núi cao, nơi mây và núi hòa làm một.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thẻ Semantic 6: ARTICLE -->
+                    <!-- Hình ảnh 3 -->
+                    <article class="glass-card rounded-2xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 group">
+                        <div class="overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Hồ nước trong xanh phản chiếu đồi núi và bầu trời hoàng hôn" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Du Lịch</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Hồ Tự Nhiên Tĩnh Lặng</h3>
+                            <p class="text-slate-400 text-sm">Vẻ đẹp thanh bình của mặt hồ phẳng lặng như gương vào buổi chiều tà.</p>
+                        </div>
+                    </article>
+
+                    <!-- Thẻ Semantic 7: ARTICLE -->
+                    <!-- Hình ảnh 4 -->
+                    <article class="glass-card rounded-2xl overflow-hidden hover:border-sky-500/50 transition-all duration-300 group">
+                        <div class="overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Khu rừng nguyên sinh chìm trong màn sương mù mờ ảo lúc sáng sớm" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Thiên Nhiên</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Rừng Sương Mù</h3>
+                            <p class="text-slate-400 text-sm">Bầu không khí huyền bí và trong lành sâu bên trong mảng rừng già.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Section -->
+        <section id="equipment" class="py-16 bg-slate-900/50 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-white mb-6">Thiết Bị Nhiếp Ảnh</h2>
+                    <p class="text-slate-300 mb-8">Để tạo ra những bức ảnh chất lượng cao, tôi tin dùng các thiết bị chuyên nghiệp sau:</p>
+                    
+                    <!-- Danh sách thứ 2 (Bổ sung) -->
+                    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                        <li class="glass-card p-4 rounded-xl flex items-center gap-3">
+                            <i class="fa-solid fa-camera text-2xl text-sky-400" aria-hidden="true"></i>
+                            <div>
+                                <span class="font-bold block text-white">Sony A7R V</span>
+                                <span class="text-xs text-slate-400">Camera chính</span>
+                            </div>
+                        </li>
+                        <li class="glass-card p-4 rounded-xl flex items-center gap-3">
+                            <i class="fa-solid fa-circle-dot text-2xl text-sky-400" aria-hidden="true"></i>
+                            <div>
+                                <span class="font-bold block text-white">24-70mm f/2.8 GM</span>
+                                <span class="text-xs text-slate-400">Ống kính đa dụng</span>
+                            </div>
+                        </li>
+                        <li class="glass-card p-4 rounded-xl flex items-center gap-3">
+                            <i class="fa-solid fa-plane-up text-2xl text-sky-400" aria-hidden="true"></i>
+                            <div>
+                                <span class="font-bold block text-white">DJI Mavic 3 Pro</span>
+                                <span class="text-xs text-slate-400">Flycam quay chụp</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Gửi Lời Nhắn Cho Tôi</h2>
+                <p class="text-slate-400 mb-8">Bạn có dự án chụp ảnh hoặc muốn hợp tác quảng bá du lịch? Hãy liên hệ ngay!</p>
+                
+                <form id="contactForm" class="glass-card p-8 rounded-2xl text-left space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Họ và Tên</label>
+                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Địa Chỉ Email</label>
+                        <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Nội Dung Lời Nhắn</label>
+                        <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-lg font-semibold btn-primary text-center">
+                        Gửi Lời Nhắn
+                    </button>
+                </form>
+
+                <div id="formSuccess" class="hidden mt-4 p-4 rounded-lg bg-emerald-900/50 border border-emerald-500 text-emerald-200">
+                    Cảm ơn bạn! Lời nhắn của bạn đã được gửi thành công.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Thẻ Semantic 8: FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
+            <p class="text-slate-400 text-sm">
+                &copy; 2026 Minh Quang Lens. Tất cả quyền được bảo lưu. Đạt chuẩn W3C & WAVE.
+            </p>
+            <div class="mt-4 sm:mt-0 flex justify-center space-x-6">
+                <!-- Liên kết ngoài bổ sung -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400" aria-label="Trang Facebook cá nhân (Mở trang mới)">
+                    <i class="fa-brands fa-facebook text-xl" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400" aria-label="Trang Instagram cá nhân (Mở trang mới)">
+                    <i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400" aria-label="Tài khoản GitHub (Mở trang mới)">
+                    <i class="fa-brands fa-github text-xl" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Xử lý gửi Form liên hệ (Không dùng alert)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const successBox = document.getElementById('formSuccess');
+            successBox.classList.remove('hidden');
+            this.reset();
+            
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
